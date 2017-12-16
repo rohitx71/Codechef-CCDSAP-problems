@@ -30,6 +30,13 @@ public class SALARY {
                 } else {
                     wi[w - 1]--;
                     steps++;
+                    for (int j = w-2; j >0 ; j--) {
+                        if((wi[w-1]+1)==wi[w-j]){
+                            wi[w - j]--;
+                            steps++;
+                        }
+                    }
+
                 }
             }
 
