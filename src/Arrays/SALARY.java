@@ -1,5 +1,6 @@
 package Arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -11,22 +12,28 @@ public class SALARY {
         int t = sc.nextInt();
         for (int i = 0; i < t; i++) {
             int w = sc.nextInt();
-            int wi[]=new int[w];
+            int wi[] = new int[w];
 
-            int max=-1;
-          //  sc.next();
+            int steps = 0;
+            //  sc.next();
             for (int j = 0; j < w; j++) {
                 wi[j] = sc.nextInt();
-                if(wi[j]>max){
-                    max=wi[j];
-                }
-            }
-            int sum=0;
-            for (int j = 0; j < w; j++) {
-                sum+=max-wi[j];
+
             }
 
-            System.out.println(sum);
+            Boolean flag = true;
+            while (flag) {
+                Arrays.sort(wi);
+                if (wi[0] == wi[w - 1]) {
+                    flag = false;
+                    break;
+                } else {
+                    wi[w - 1]--;
+                    steps++;
+                }
+            }
+
+            System.out.println(steps);
 
         }
     }
