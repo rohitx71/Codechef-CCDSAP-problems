@@ -1,0 +1,33 @@
+package Arrays;
+
+import java.util.Scanner;
+
+/**
+ * Created by rohitx71 on 16-12-2017.
+ */
+public class SALARY {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        for (int i = 0; i < t; i++) {
+            int w = sc.nextInt();
+            int wi[]=new int[w];
+
+            int max=-1;
+          //  sc.next();
+            for (int j = 0; j < w; j++) {
+                wi[j] = sc.nextInt();
+                if(wi[j]>max){
+                    max=wi[j];
+                }
+            }
+            int sum=0;
+            for (int j = 0; j < w; j++) {
+                sum+=max-wi[j];
+            }
+
+            System.out.println(sum);
+
+        }
+    }
+}
