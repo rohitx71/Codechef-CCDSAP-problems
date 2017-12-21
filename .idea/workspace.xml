@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SPOJ_STPAR.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SPOJ_STPAR.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StackandQueue/SPOJ_STPAR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1053">
-              <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="554">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#558#567#0" expanded="true" />
@@ -39,12 +39,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSUB.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/string/CSUB.java">
+      <file leaf-file-name="SPOJ_ONP.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/StackandQueue/SPOJ_ONP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="675">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#558#569#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/StackandQueue/SPOJ_JNEXT.java" />
         <option value="$PROJECT_DIR$/src/StackandQueue/STPAR.java" />
         <option value="$PROJECT_DIR$/src/StackandQueue/SPOJ_STPAR.java" />
+        <option value="$PROJECT_DIR$/src/StackandQueue/SPOJ_ONP.java" />
       </list>
     </option>
   </component>
@@ -282,27 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SPOJ_STPAR">
-    <configuration default="false" name="CHN15A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Arrays.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Arrays.CHN15A" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Found" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.SPOJ_ONP">
     <configuration default="false" name="FRGTNLNG" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -371,6 +355,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="StackandQueue.SPOJ_STPAR" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Found" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SPOJ_ONP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="StackandQueue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="StackandQueue.SPOJ_ONP" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -533,19 +537,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CHN15A" />
-      <item index="1" class="java.lang.String" itemvalue="Application.FRGTNLNG" />
-      <item index="2" class="java.lang.String" itemvalue="Application.COPS" />
-      <item index="3" class="java.lang.String" itemvalue="Application.SPOJ_JNEXT" />
-      <item index="4" class="java.lang.String" itemvalue="Application.SPOJ_STPAR" />
+      <item index="0" class="java.lang.String" itemvalue="Application.FRGTNLNG" />
+      <item index="1" class="java.lang.String" itemvalue="Application.COPS" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SPOJ_JNEXT" />
+      <item index="3" class="java.lang.String" itemvalue="Application.SPOJ_STPAR" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SPOJ_ONP" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.SPOJ_STPAR" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SPOJ_JNEXT" />
-        <item index="2" class="java.lang.String" itemvalue="Application.COPS" />
-        <item index="3" class="java.lang.String" itemvalue="Application.FRGTNLNG" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CHN15A" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SPOJ_ONP" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SPOJ_STPAR" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SPOJ_JNEXT" />
+        <item index="3" class="java.lang.String" itemvalue="Application.COPS" />
+        <item index="4" class="java.lang.String" itemvalue="Application.FRGTNLNG" />
       </list>
     </recent_temporary>
   </component>
@@ -965,11 +969,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StackandQueue/SPOJ_STPAR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        <state relative-caret-position="554">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#558#567#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StackandQueue/SPOJ_ONP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#558#569#0" expanded="true" />
           </folding>
         </state>
       </provider>
