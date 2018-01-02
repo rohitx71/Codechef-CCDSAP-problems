@@ -7,11 +7,11 @@ public class Ctci_magicIndex {
 
     public static void main(String args[]) {
         int arr[] = {-10, 1, 1, 1, 8, 8, 30, 50, 100};
-        System.out.println(fib(1000));
+        System.out.println(magicIndex(arr));
 
     }
 
     static int magicIndex(int n[]) {
-
+        return 0;
     }
 }
