@@ -14,11 +14,11 @@ public class NW1 {
             int[] val = new int[8];
             if (s.equals("mon")) {
                 n = 1;
-            } else if (s.equals("tue")) {
+            } else if (s.equals("tues")) {
                 n = 2;
             } else if (s.equals("wed")) {
                 n = 3;
-            } else if (s.equals("thu")) {
+            } else if (s.equals("thurs")) {
                 n = 4;
             } else if (s.equals("fri")) {
                 n = 5;
