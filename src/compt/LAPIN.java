@@ -1,5 +1,7 @@
 package compt;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -14,20 +16,22 @@ public class LAPIN {
             String s=sc.nextLine();
 
 
-            char a[]=new char[125];
-            char b[]=new char[125];
+            char a[]=new char[26];
+            char b[]=new char[26];
 
             int n=s.length()/2;
             /*if(s.length()%2!=0){
                 a[s.charAt(n)]++;
             }*/
+
+            //Arrays.sort(s,0,n);
             for (int i = 0; i < n; i++) {
-                a[s.charAt(i)]++;
-                b[s.charAt(s.length()-i-1)]++;
+                a[s.charAt(i)-'a']++;
+                b[s.charAt(s.length()-i-1)-'a']++;
 
             }
             boolean flag=false;
-            for (int i = 0; i < 125; i++) {
+            for (int i = 0; i < 26; i++) {
                 if((a[i]!=b[i])){
                     flag=true;
                     System.out.println("NO");
