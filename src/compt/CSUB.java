@@ -13,7 +13,7 @@ public class CSUB {
             String s = sc.nextLine();
 
 //            StringBuffer stringBuffer=new StringBuffer();
-            int count = 0;
+            long count = 0;
             for (int i = 0; i < n; i++) {
                 if (s.charAt(i) == '1') {
                     count++;
@@ -21,7 +21,9 @@ public class CSUB {
                 }
             }
 
-            System.out.println((count * (count + 1)) / 2);
+
+            count = (count * (count + 1)) / 2;
+            System.out.println(count);
         }
     }
 }
