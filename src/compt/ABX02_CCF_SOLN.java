@@ -21,6 +21,10 @@ public class ABX02_CCF_SOLN {
     static class Task {
         long mod = 1000000007;
         static HashMap<Long, Long> map;
+        static long counter = 0;
+        static long cheat = 0;
+        static long nulled = 0;
+        static long zero = 0;
 
         public void solve(int testNumber, InputReader in, PrintWriter out) {
             int p = in.nextInt();
@@ -31,15 +35,26 @@ public class ABX02_CCF_SOLN {
             int s1 = in.nextInt();
             int s2 = in.nextInt();
             map = new HashMap<>();
-            System.out.println((func(n, p, q, b1, b2, s1, s2, 1) + func(n, p, q, b1, b2, s1, s2, 2)) % mod);
+            System.out.println((func(n, p, q, b1, b2, s1, s2, 1) + func(n, p, q, b1, b2, s1, s2, 2))%mod );
+            System.out.println("Counter : "+counter+": Cheat : "+cheat+
+                    ":Zero : "+zero+": wasted : "+nulled);
+
         }
 
         long func(long n, long p, long q, long b1, long b2, int s1, int s2, long prev) {
-            if (n < 0) return 0;
-            if (n == 0) return 1;
+            if (n < 0) {
+                nulled++;
+                return 0;
+            }
+            if (n == 0) {
+                zero++;
+                return 1;
+            }
             //this awesome functions does the memoization..
-            if (map.containsKey((b2 + 201 * (b1 + 201 * (q + 201 * (p + 201 * (n))))) * 2 + prev % 2))
+            if (map.containsKey((b2 + 201 * (b1 + 201 * (q + 201 * (p + 201 * (n))))) * 2 + prev % 2)) {
+                counter++;
                 return map.get((b2 + 201 * (b1 + 201 * (q + 201 * (p + 201 * (n))))) * 2 + prev % 2);
+            }
             long ans = 0;
             if (prev == 2) {
                 if (b1 > 0) {
@@ -54,7 +69,7 @@ public class ABX02_CCF_SOLN {
                     }
                 }
             }
-
+            cheat++;
             map.put((b2 + 201 * (b1 + 201 * (q + 201 * (p + 201 * (n))))) * 2 + prev % 2, ans);
             return ans;
         }
