@@ -35,6 +35,15 @@ public class MAXSC {
                         index[i] = j;
                         break;
                     }
+                    if(j==n-1){
+                        int k=Arrays.binarySearch(a[i],max[i+1]);
+                        if(k!=-1){
+                            max[i]=a[i][k];
+                            sum += a[i][k];
+                            index[i] = k;
+
+                        }
+                    }
                     if (j == n - 1) {
                         index[i + 1]=index[i+1]-1;
                         sum-=a[i+1][index[i+1]+1];
