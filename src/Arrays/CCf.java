@@ -31,7 +31,7 @@ public class CCf {
 //            System.out.println(sum1);
 //            int a2 = sum1;
             int sum2 = 0;
-           // int a2 = 134;
+            // int a2 = 134;
             while (a > 9) {
                 while (a > 0) {
                     sum2 += a % 10;
@@ -41,10 +41,10 @@ public class CCf {
 
             }
             int sum1;
-           // sum2=0;
+            // sum2=0;
             sum1 = (int) Math.pow(sum2, n);
             System.out.println(sum1);
-            sum2=0;
+            sum2 = 0;
             while (sum1 > 9) {
                 while (sum1 > 0) {
                     sum2 += sum1 % 10;
@@ -53,7 +53,7 @@ public class CCf {
                 }
 
             }
-            
+
             System.out.println(sum2);
 
 
