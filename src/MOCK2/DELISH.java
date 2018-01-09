@@ -42,6 +42,10 @@ public class DELISH {
 
     }
 
+    static long max_form_left(long a[],int starti,int endi){
+
+    }
+
     static long calculate(long a[], int starti, int startj, int endi, int endj, int n, long max, long dp[][]) {
 
         long dist;
