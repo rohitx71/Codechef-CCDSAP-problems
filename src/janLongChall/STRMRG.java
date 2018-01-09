@@ -1,76 +1,98 @@
 package janLongChall;
 
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class STRMRG {
+    static int n, m;
+
+
+    static int[] fin = new int[2];
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
 
         while (t-- > 0) {
 
-            int n = sc.nextInt();
-            int m = sc.nextInt();
+            n = sc.nextInt();
+            m = sc.nextInt();
 
+//            System.out.println(m);
             sc.nextLine();
 
-            char a[]=new char[n];
-            char b[]=new char[m];
+            char a[] = sc.nextLine().toCharArray();
+            char b[] = sc.nextLine().toCharArray();
 
-            char c[]=new char[m];
+            char c[] = new char[m + n];
 
 
-            long stack[] = new long[n];
-            int index = -1;
-            Boolean flag = false;
-            StringTokenizer stringTokenizer = new StringTokenizer(sc.nextLine());
-            long max = 0;
-            for (int i = 0; i < n; i++) {
-                long x = Long.parseLong(stringTokenizer.nextToken());
-                for (int j = 0; j <= index / 2; j++) {
-                    if (j == 0) {
-                        int ind = Arrays.binarySearch(stack, x);
-                        if (ind > 0) {
-                            stack[ind - 1] = x;
-                        }
-                        if (x >= max) {
-                            stack[++index] = x;
-                            flag = true;
+            int val1 = 0, val2;
+            //StringBuffer stringBuffer = new StringBuffer(a[0]);
 
-                            break;
-                        }
+            val1 = calculate(a[0] + "", 1, 0, 1, a, b);
+            //stringBuffer = new StringBuffer(b[0]);
+            //System.out.println("VAlue" + fin[0] + " : " + fin[1]);
 
-                    }
-                    if ((index - j - 1) > 0)
-                        if (x < stack[index - j] && x > stack[index - j - 1]) {
-                            stack[index - j] = x;
-                            flag = true;
-                            break;
-                        }
-                    if (x < stack[j]) {
-                        //System.out.println("x:" + x + " :stack[j]" + stack[j]);
-                        stack[j] = x;
-                        flag = true;
-                        break;
-                    }
-                }
-                if (!flag) {
-                    stack[++index] = x;
-                }
-                max = stack[index];
-                flag = false;
-            }
-            System.out.print(index + 1 + " ");
-            for (int i = 0; i <= index; i++) {
-                System.out.print(stack[i] + " ");
+            int min = (fin[0] < fin[1] ? fin[0] : fin[1]);
 
-            }
-            System.out.println();
+            val2 = calculate(b[0] + "", 0, 1, 1, a, b);
+            int min2 = (fin[0] < fin[1] ? fin[0] : fin[1]);
+
+//            System.out.println("VAlue1" + val1 + " : " + val2);
+
+            System.out.println(min < min2 ? min : min2);
 
 
         }
+    }
+
+
+    static int calculate(String s, int i, int j, int value, char a[], char b[]) {
+        if (s.length() >= 2)
+
+            if (s.charAt(s.length() - 2) != s.charAt(s.length() - 1)) {
+                ++value;
+                //         System.out.println("VAlue INCR" + value + " :Str " + s);
+
+            }
+           System.out.println("VAlue" + value + " :Str " + s);
+
+        int val1 = value, val2 = value;
+        if (i < n) {
+            //System.out.println("i:" + i + "n:" + n);
+            //System.out.println(s.append(a[i]));
+
+            val1 = calculate(s + a[i], ++i, j, value, a, b);
+            //         System.out.println(val1);
+
+            if (i == n) {
+                fin[0] = val1;
+
+            }
+            /*if(temp>val1){
+                value=temp;
+            }*/
+        }
+        if (j < m) {
+            //System.out.println("j:" + j + "m:" + m);
+            val2 = calculate(s + b[j], i, ++j, value, a, b);
+            /*if(temp>value){
+                value=temp;
+            }*/
+
+
+            if (i == n) {
+                fin[1] = val2;
+
+            }
+///            System.out.println(val2);
+
+
+        }
+
+
+        //return value;
+        return (val1 < val2 ? val1 : val2);
     }
 }
 
