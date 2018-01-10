@@ -23,6 +23,7 @@ public class DELISH {
             for (int i = 0; i < n; i++) {
                 a[i] = Long.parseLong(stringTokenizer.nextToken());
             }
+<<<<<<< HEAD
 
 
             long min1[] = new long[n];
@@ -36,6 +37,10 @@ public class DELISH {
             min_from_left(a, n, min2, max2);
     
             /*for (int i = 0; i < n - 1; i++) {
+=======
+            long max = 0;
+            for (int i = 0; i < n - 1; i++) {
+>>>>>>> origin/master
                 for (int j = i; j < n - 1; j++) {
 
 
@@ -44,6 +49,7 @@ public class DELISH {
                         max = temp;
                     }
                 }
+<<<<<<< HEAD
             }*/
             long max = max1[0] - min1[1];
             long maxx = max2[0] - min2[1];
@@ -108,6 +114,18 @@ public class DELISH {
     }
 
     /*static long calculate(long a[], int starti, int startj, int endi, int endj, int n, long max, long dp[][]) {
+=======
+            }
+
+            System.out.println(max);
+            System.out.println("Count : " + count + " : fail " + fail);
+
+        }
+
+    }
+
+    static long calculate(long a[], int starti, int startj, int endi, int endj, int n, long max, long dp[][]) {
+>>>>>>> origin/master
 
         long dist;
         if (dp[starti][startj] != 0) {
@@ -150,5 +168,9 @@ public class DELISH {
             }
         }
         return sum;
+<<<<<<< HEAD
     }*/
+=======
+    }
+>>>>>>> origin/master
 }
