@@ -23,7 +23,6 @@ public class DELISH {
             for (int i = 0; i < n; i++) {
                 a[i] = Long.parseLong(stringTokenizer.nextToken());
             }
-<<<<<<< HEAD
 
 
             long min1[] = new long[n];
@@ -53,7 +52,7 @@ public class DELISH {
             }*/
             long max = max1[0] - min1[1];
             long maxx = max2[0] - min2[1];
-            for (int i = 0; i < n-1; i++) {
+            for (int i = 0; i < n - 1; i++) {
 
                 if (Math.abs(max1[i] - min1[i + 1]) > max) {
                     max = Math.abs(max1[i] - min1[i + 1]);
@@ -170,7 +169,6 @@ public class DELISH {
         return sum;
 <<<<<<< HEAD
     }*/
-=======
-    }
->>>>>>> origin/master
 }
+
+
