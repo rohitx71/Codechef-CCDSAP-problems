@@ -23,8 +23,19 @@ public class DELISH {
             for (int i = 0; i < n; i++) {
                 a[i] = Long.parseLong(stringTokenizer.nextToken());
             }
-            long max = 0;
-            for (int i = 0; i < n - 1; i++) {
+
+
+            long min1[] = new long[n];
+            long max1[] = new long[n];
+
+
+            long min2[] = new long[n];
+            long max2[] = new long[n];
+
+            max_from_left(a, n, min1, max1);
+            min_from_left(a, n, min2, max2);
+    
+            /*for (int i = 0; i < n - 1; i++) {
                 for (int j = i; j < n - 1; j++) {
 
 
@@ -33,20 +44,70 @@ public class DELISH {
                         max = temp;
                     }
                 }
-            }
+            }*/
+            long max = max1[0] - min1[1];
+            long maxx = max2[0] - min2[1];
+            for (int i = 0; i < n-1; i++) {
 
-            System.out.println(max);
-            System.out.println("Count : " + count + " : fail " + fail);
+                if (Math.abs(max1[i] - min1[i + 1]) > max) {
+                    max = Math.abs(max1[i] - min1[i + 1]);
+                }
+
+
+                if (Math.abs(max2[i] - min2[i + 1]) > maxx) {
+                    maxx = Math.abs(max2[i] - min2[i + 1]);
+                }
+            }
+            System.out.println(max > maxx ? max : maxx);
+            //System.out.println("Count : " + count + " : fail " + fail);
 
         }
 
     }
 
-    static long max_form_left(long a[],int starti,int endi){
+    static void max_from_left(long a[], int n, long min[], long max[]) {
+
+        //long max[] = new long[n];
+        max[0] = a[0];
+        long curr = a[0];
+        for (int i = 1; i < n; i++) {
+            curr = Math.max(curr + a[i], curr);
+            max[i] = Math.max(max[i - 1], curr);
+        }
+        curr = a[n - 1];
+        //long min[] = new long[n];
+        //min[0]=a[0];
+        min[n - 1] = a[n - 1];
+        for (int i = n - 2; i > -1; i--) {
+            curr = Math.min(curr + a[i], curr);
+            min[i] = Math.min(min[i + 1], curr);
+        }
+
+
+        //return Math.abs(max - min);
+    }
+
+
+    static void min_from_left(long a[], int n, long min[], long max[]) {
+
+
+        max[0] = a[0];
+        long curr = a[0];
+        for (int i = 1; i < n; i++) {
+            curr = Math.min(curr + a[i], curr);
+            max[i] = Math.min(max[i - 1], curr);
+        }
+        curr = a[n - 1];
+        min[n - 1] = a[n - 1];
+        for (int i = n - 2; i > -1; i--) {
+            curr = Math.max(curr + a[i], curr);
+            min[i] = Math.max(min[i + 1], curr);
+        }
+
 
     }
 
-    static long calculate(long a[], int starti, int startj, int endi, int endj, int n, long max, long dp[][]) {
+    /*static long calculate(long a[], int starti, int startj, int endi, int endj, int n, long max, long dp[][]) {
 
         long dist;
         if (dp[starti][startj] != 0) {
@@ -89,5 +150,5 @@ public class DELISH {
             }
         }
         return sum;
-    }
+    }*/
 }
