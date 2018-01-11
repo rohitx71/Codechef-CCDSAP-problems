@@ -1,6 +1,6 @@
 package greedy;
 
-import java.util.Scanner;
+        import java.util.Scanner;
 
 public class CAKEDOOM {
     static Boolean flag = false;
