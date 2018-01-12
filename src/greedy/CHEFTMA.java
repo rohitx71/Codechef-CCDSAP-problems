@@ -47,12 +47,12 @@ public class CHEFTMA {
                 }
             }
 
-            for (int j = 0; j < ; j++) {
+            for (int j = 0; j < n ; j++) {
                 
             }
 
 
-            System.out.println(min);
+            System.out.println();
 
         }
     }
