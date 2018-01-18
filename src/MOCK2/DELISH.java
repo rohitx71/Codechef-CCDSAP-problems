@@ -18,7 +18,7 @@ public class DELISH {
 
             sc.nextLine();
             long a[] = new long[n];
-            long dp[][] = new long[n][n];
+            //long dp[][] = new long[n][n];
             StringTokenizer stringTokenizer = new StringTokenizer(sc.nextLine());
             for (int i = 0; i < n; i++) {
                 a[i] = Long.parseLong(stringTokenizer.nextToken());
@@ -32,24 +32,10 @@ public class DELISH {
             long min2[] = new long[n];
             long max2[] = new long[n];
 
-            max_from_left(a, n, min1, max1);
-            min_from_left(a, n, min2, max2);
-    
-            /*for (int i = 0; i < n - 1; i++) {
-=======
-            long max = 0;
-            for (int i = 0; i < n - 1; i++) {
->>>>>>> origin/master
-                for (int j = i; j < n - 1; j++) {
+            max_from_left(a, n, max2, max1);
+            min_from_left(a, n, min2, min1);
 
 
-                    long temp = calculate(a, i, j, j + 1, i + 1, n, max, dp);
-                    if (temp > max) {
-                        max = temp;
-                    }
-                }
-<<<<<<< HEAD
-            }*/
             long max = max1[0] - min1[1];
             long maxx = max2[0] - min2[1];
             for (int i = 0; i < n - 1; i++) {
@@ -70,22 +56,19 @@ public class DELISH {
 
     }
 
-    static void max_from_left(long a[], int n, long min[], long max[]) {
+    static void max_from_left(long a[], int n, long max1[], long max[]) {
 
         //long max[] = new long[n];
         max[0] = a[0];
         long curr = a[0];
+        max1[0] = a[0];
+        long curr2 = a[0];
         for (int i = 1; i < n; i++) {
             curr = Math.max(curr + a[i], curr);
             max[i] = Math.max(max[i - 1], curr);
-        }
-        curr = a[n - 1];
-        //long min[] = new long[n];
-        //min[0]=a[0];
-        min[n - 1] = a[n - 1];
-        for (int i = n - 2; i > -1; i--) {
-            curr = Math.min(curr + a[i], curr);
-            min[i] = Math.min(min[i + 1], curr);
+
+            curr2 = Math.min(curr2 + a[i], curr2);
+            max1[i] = Math.min(max1[i - 1], curr2);
         }
 
 
@@ -93,82 +76,30 @@ public class DELISH {
     }
 
 
-    static void min_from_left(long a[], int n, long min[], long max[]) {
+    static void min_from_left(long a[], int n, long min[], long min1[]) {
 
 
-        max[0] = a[0];
-        long curr = a[0];
-        for (int i = 1; i < n; i++) {
-            curr = Math.min(curr + a[i], curr);
-            max[i] = Math.min(max[i - 1], curr);
-        }
-        curr = a[n - 1];
+        long curr = a[n - 1];
+        long curr2 = a[n - 1];
         min[n - 1] = a[n - 1];
         for (int i = n - 2; i > -1; i--) {
             curr = Math.max(curr + a[i], curr);
             min[i] = Math.max(min[i + 1], curr);
+
+
+            //long min[] = new long[n];
+            //min[0]=a[0];
+            min1[n - 1] = a[n - 1];
+
+            curr2 = Math.min(curr2 + a[i], curr2);
+            min1[i] = Math.min(min1[i + 1], curr2);
+
         }
 
 
     }
 
-    /*static long calculate(long a[], int starti, int startj, int endi, int endj, int n, long max, long dp[][]) {
-=======
-            }
 
-            System.out.println(max);
-            System.out.println("Count : " + count + " : fail " + fail);
-
-        }
-
-    }
-
-    static long calculate(long a[], int starti, int startj, int endi, int endj, int n, long max, long dp[][]) {
->>>>>>> origin/master
-
-        long dist;
-        if (dp[starti][startj] != 0) {
-            dist = dp[starti][startj];
-            count++;
-        } else {
-            dist = distance(a, starti, startj, dp);
-
-        }
-
-
-        for (int i = endi; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                //  long val=Math.abs(calculate(a,starti,startj,i,j,n,max);
-                long val;
-                if (dp[i][j] != 0) {
-                    count++;
-                    val = Math.abs(dist - dp[i][j]);
-                } else {
-                    val = Math.abs(dist - distance(a, i, j, dp));
-                }
-
-                if (val > max) {
-                    max = val;
-                }
-            }
-        }
-        return max;
-    }
-
-    static long distance(long a[], int start, int end, long dp[][]) {
-        fail++;
-        long sum = 0;
-        for (int i = start; i <= end; i++) {
-            if (dp[start][end] != 0) {
-                sum = dp[start][end];
-            } else {
-                sum += a[i];
-                dp[start][i] = sum;
-            }
-        }
-        return sum;
-<<<<<<< HEAD
-    }*/
 }
 
 

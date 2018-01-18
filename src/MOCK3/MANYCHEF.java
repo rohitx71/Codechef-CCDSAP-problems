@@ -46,6 +46,7 @@ public class MANYCHEF {
 //            for (int i = 0; i < n; i++) {
 //                System.out.print(a[i]);
 //            }
+                System.out.println("Hello");
                 System.out.println(s.reverse());
 
 
