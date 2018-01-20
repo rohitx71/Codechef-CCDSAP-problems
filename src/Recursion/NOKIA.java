@@ -7,13 +7,9 @@ import java.util.*;
  * Created by rohitx71 on 26-12-2017.
  */
 public class NOKIA {
-    public static void main(String args[]) throws IOException {
+    public static void main(String args[])  {
         Scanner sc = new Scanner(System.in);
-        try {
 
-        } catch (Throwable throwable) {
-
-        }
         int t = sc.nextInt();
         sc.nextLine();
         while (t-- > 0) {
@@ -46,34 +42,12 @@ public class NOKIA {
             } else {
                 System.out.println(m - max);
             }
-            /*if (m == max || m == min) {
-                System.out.println("0");
-            } else {
-                int i;
-                for (i = 1; i < n + 1; i++) {
-                    if (cost[i] == m) {
-                        System.out.println("0");
-                        break;
-                    }
-                }
-                if (i == n + 1) {
 
-                    // System.out.println("min:" + (min));
-                    if (m < min) {
-
-
-                        System.out.println("-1");
-                    } else {
-                        // System.out.println("max:" + (max));
-                        int temp = m - max;
-                        System.out.println((temp));
-                    }
-                }
-            }*/
         }
 
 
     }
+
 
     private static int cost(int[] vi, int pos, int cost, int n, int m) {
         for (int i = pos - 1; i >= 0; i--) {
