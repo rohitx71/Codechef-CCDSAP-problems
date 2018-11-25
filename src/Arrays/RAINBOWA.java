@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**
+ * Created by rohitx71 on 25-11-2018
+ */
 public class RAINBOWA {
     public static void main(String args[]) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
